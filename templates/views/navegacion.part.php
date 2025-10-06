@@ -1,15 +1,6 @@
 <!-- Navigation Bar -->
 <?php 
-  function esOpcionMenuActiva ( $opcion ) { 
-    $actual = explode('/',$_SERVER['REQUEST_URI']); 
-    $actual = '/'.$actual[count($actual)-1]; 
-    if ( $actual === $opcion) { 
-      return true; 
-    } 
-    else { 
-      return false; 
-    } 
-  } 
+  require_once __DIR__ . '/../../src/Utils/Utils.class.php'
 ?> 
 
    <nav class="navbar navbar-fixed-top navbar-default">
@@ -28,7 +19,7 @@
          <div class="collapse navbar-collapse navbar-right" id="menu">
             <ul class="nav navbar-nav">
               <?php 
-                if (esOpcionMenuActiva('/index.php')==true || esOpcionMenuActiva('/')==true) 
+                if (Utils::esOpcionMenuActiva('/index.php')==true || Utils::esOpcionMenuActiva('/')==true) 
                   echo '<li class="active lien">';
                 else 
                   echo '<li class="lien">';
@@ -36,16 +27,7 @@
               <a href="index.php">Home</a></li>
 
               <?php 
-                if (esOpcionMenuActiva('/home.php')==true) 
-                  echo '<li class="active lien">';
-                else 
-                  echo '<li class="lien">';
-              ?>
-              <a href="#"><i class="fa fa-home sr-icons"></i> Home</a></li>
-
-
-              <?php 
-                if (esOpcionMenuActiva('/about.php')==true) 
+                if (Utils::esOpcionMenuActiva('/about.php')==true) 
                   echo '<li class="active lien">';
                 else 
                   echo '<li class="lien">';
@@ -54,7 +36,7 @@
 
 
               <?php 
-                if (esOpcionMenuActiva('/blog.php')==true) 
+                if (Utils::esOpcionMenuActiva('/blog.php')==true) 
                   echo '<li class="active lien">';
                 else 
                   echo '<li class="lien">';
@@ -63,7 +45,7 @@
 
 
               <?php 
-                if (esOpcionMenuActiva('/contact.php')==true) 
+                if (Utils::esOpcionMenuActiva('/contact.php')==true) 
                   echo '<li class="active lien">';
                 else 
                   echo '<li class="lien">';
