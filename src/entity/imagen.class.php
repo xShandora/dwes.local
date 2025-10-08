@@ -94,7 +94,7 @@ class Imagen{
     }
 
     public function getUrlPortfolio(): string{
-        return self::RUTA_IMAGENES_CLIENTES . $this->getNombre();
+        return self::RUTA_IMAGENES_PORTFOLIO . $this->getNombre();
     }
     public function getUrlGaleria(): string{
         return self::RUTA_IMAGENES_GALERIA . $this->getNombre();
