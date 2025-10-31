@@ -1,5 +1,5 @@
 <?php
-    require_once __DIR__ . '/../src/entity/imagen.class.php'; 
+    require_once __DIR__ . '/../../src/entity/imagen.class.php'; 
 
     $imagenesHome[]= new Imagen ('1.jpg','descripción imagen 1',1,456,610,130);
     $imagenesHome[]= new Imagen ('2.jpg','descripción imagen 2',1,456,610,130); 
@@ -14,4 +14,4 @@
     $imagenesHome[]= new Imagen ('11.jpg','descripción imagen 11',1,456,610,130); 
     $imagenesHome[]= new Imagen ('12.jpg','descripción imagen 12',1,456,610,130); 
 
-    require_once __DIR__ . '/views/index.view.php';
+    require_once __DIR__ . '/../views/index.view.php';
